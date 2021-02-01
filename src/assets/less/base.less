@@ -1,0 +1,311 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  font-family: Lato, Avenir Next, PingFangSC, Microsoft YaHei, Helvetica, Arial,
+    sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: var(--col-body-background);
+}
+
+div,
+h3,
+h2,
+h1,
+h4,
+p,
+li {
+  line-height: 1;
+}
+
+a,
+button,
+input,
+li {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+body,
+html a {
+  color: #333;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p,
+h3 {
+  margin: 0;
+}
+
+textarea {
+  border: 0;
+  outline: none;
+}
+
+button {
+  outline: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*文字溢出...*/
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.pos-a {
+  position: absolute;
+}
+
+.pos-f {
+  position: fixed;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.fix-ios-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*禁止长按选中*/
+*:not(input, textarea) {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+[contenteditable="true"],
+input,
+textarea {
+  -webkit-user-select: auto !important;
+  -khtml-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  -o-user-select: auto !important;
+  user-select: auto !important;
+}
+
+.btn {
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn:active {
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+/*三角  弹框上的三角*/
+.border-triangle {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 6px;
+  -webkit-filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.03));
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.03));
+  top: 6px;
+  right: 14px;
+  margin-right: 3px;
+  border-top-width: 0;
+  border-bottom-color: #fff;
+}
+
+/*input输入框设置type=number时，去掉后面的上下按钮 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.__background {
+  background-color: var(--col-card-background-default);
+}
+
+.__cursor {
+  cursor: pointer;
+}
+
+.__container {
+  width: 100%;
+  background-color: var(--col-background);
+  border-radius: 10px;
+}
+
+.__shadow {
+  box-shadow: 0 0 20px rgba(21, 11, 112, 0.08);
+}
+
+.__paper {
+  background-color: var(--col-paper);
+  border-radius: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.__button {
+  width: 100%;
+  font-size: 28px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+@media (min-width: 960px) {
+  .__container {
+    margin: 0 auto 70px auto;
+    box-shadow: 0 0 20px rgba(21, 11, 112, 0.08);
+    border-radius: 10px;
+  }
+
+  .__paper {
+    background-color: var(--col-paper);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .__button {
+    font-size: 14px;
+    height: 40px;
+  }
+}
