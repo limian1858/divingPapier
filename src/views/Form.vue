@@ -1,10 +1,10 @@
 <template>
     <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
         <div class="flex-form">
-            <el-form-item class="name" prop="first">
+            <el-form-item class="name last" prop="first">
                 <el-input placeholder="First Name" v-model="ruleForm.first"></el-input>
             </el-form-item>
-            <el-form-item class="name" prop="last">
+            <el-form-item class="name last" prop="last">
                 <el-input placeholder="Last Name" v-model="ruleForm.last"></el-input>
             </el-form-item>
         </div>
@@ -81,6 +81,18 @@ export default {
     .flex-form {
         display: flex;
         justify-content: space-between;
+    }
+}
+@media screen and (max-width:750px){
+    .demo-ruleForm {
+        width: 100%;
+        margin-bottom: 50px;
+        .flex-form {
+            flex-direction: column;
+        }
+        .last{
+            padding-top:40PX;
+        }
     }
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
     <div class="Footer __Container">
-        <div>
+        <div class="lh">
             <span class="email">Hello@divinerapier.co</span>
             <span class="ltd">Divine Rapier LTD</span>
         </div>
-        <div>
+        <div class="lh">
             <span class="home">
                 <a @click="link('#')">Home</a>
             </span>
@@ -57,6 +57,36 @@ export default {
             font-size: 18px;
             color: #2334D8;
             cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .Footer {
+        margin-bottom: 100PX;
+        //padding: 50px 0;
+        flex-direction: column;
+        justify-content: center;
+        .email {
+            font-size: 22px;
+        }
+
+        .ltd {
+            font-size: 22px;
+            margin-left: 40px;
+        }
+        .lh{
+            height: 100px;
+        }
+
+        .home {
+            a {
+                font-family: 'Nunito Sans', Helvetica, Arial, Lucida, sans-serif;
+                text-transform: uppercase;
+                font-size: 18px;
+                color: #2334D8;
+                cursor: pointer;
+            }
         }
     }
 }

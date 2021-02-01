@@ -91,7 +91,7 @@
                 </div>
             </div>
         </div>
-        <div class="Footer __Container">
+        <div class="">
             <Footer/>
         </div>
     </div>
@@ -308,11 +308,11 @@ export default {
     }
 
     .Serve {
-        height: 1200PX;
+        //height: 1200PX;
         display: flex;
         justify-content: space-between;
         padding-top: 108PX;
-
+        margin-bottom: 160PX;
         .Serve-Left {
             width: 375PX;
             font-size: 36PX;
@@ -385,6 +385,146 @@ export default {
     display: flex;
     padding: 50PX 0;
     justify-content: space-between;
+}
+@media screen and (max-width:750px){
+    .__Container {
+        width: 100%;
+        padding: 0 15PX;
+    }
+    .Home{
+        .Header {
+            .Left {
+                color: #ffffff;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            .Right {
+                font-size: 16px;
+                span {
+                    padding: 0 30px;
+                }
+            }
+        }
+        .Banner {
+            //height: 590PX;
+            display: flex;
+            padding: 115PX 0 0 0;
+            .Banner-Box {
+                padding-top: 30px;
+                position: relative;
+            }
+
+            .Banner-Left {
+                width: 100%;
+                height: 400px;
+                font-size: 36px;
+                padding-top: 50px;
+                .Moer {
+                    a {
+                        position: relative;
+                        display: block;
+                        width: 205PX;
+                        height: 47PX;
+                        line-height: 47PX;
+                        font-size: 16PX;
+                        background: #ffffff;
+                        border-radius: 100PX;
+                        padding-left: 20PX;
+                        color: #2334D8;
+                        cursor: pointer;
+
+                        &:after {
+                            font-size: inherit !important;
+                            opacity: 1;
+                            right: 0;
+                            background: #35EABF;
+                            width: 42PX;
+                            height: 46.8PX;
+                            text-align: center;
+                            margin-top: 0PX;
+                            -webkit-border-top-right-radius: 100PX;
+                            -webkit-border-bottom-right-radius: 100PX;
+                            -moz-border-radius-topright: 100PX;
+                            -moz-border-radius-bottomright: 100PX;
+                            border-top-right-radius: 100PX;
+                            border-bottom-right-radius: 100PX;
+                            line-height: 47PX !important;
+                            margin-left: 0PX;
+                            color: #2334D8;
+                            content: "";
+                            position: absolute;
+                            text-shadow: none;
+                            font-weight: 400;
+                            text-transform: none;
+                        }
+
+                        .el-icon-right {
+                            font-size: 22PX;
+                            z-index: 100;
+                            position: absolute;
+                            right: 12PX;
+                            font-weight: bold;
+                            transform: translateY(50%);
+                        }
+
+                        &:hover {
+                            .el-icon-right {
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .Banner-Right {
+                flex: 1;
+                top: 550px;
+                position: absolute;
+                left: 0;
+                width: 100%;
+            }
+        }
+        .Serve{
+            min-height: 1200px;
+            flex-direction: column;
+            .Serve-Left{
+                text-align: center;
+            }
+            .Serve-Right{
+                padding-left: 0;
+                .List{
+                    .Item{
+                        width: 100%;
+                        margin-bottom: 20PX;
+                    }
+                }
+            }
+            .Flex{
+                flex-direction: column;
+                padding: 0;
+            }
+        }
+
+        .Form {
+            margin-top: -5PX;
+            margin-bottom: 50px;
+
+            .Request {
+                float: none;
+                width: 100%;
+                .title {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 36px;
+                    padding-top: 50px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+
 }
 </style>
 
