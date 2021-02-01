@@ -15,8 +15,8 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'test',
-            component: () => import('../views/test')
+            name: 'Home',
+            component: () => import('../views/Home')
         }
     ],
     //   to, from, savedPosition

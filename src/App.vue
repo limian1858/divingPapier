@@ -24,6 +24,12 @@ export default {
 #app {
     width: 100%;
     height: 100%;
+    color: #666;
+    background-color: #fff;
+    font-family: "Open Sans",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
 }
 
 </style>
