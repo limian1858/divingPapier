@@ -1,7 +1,7 @@
 <template>
     <div class="Home">
         <div class="Header">
-            <div class="__Container Top">
+            <div class="__Container Top" :class="{active: active}">
                 <div class="Left">
                     Divine Rapier
                 </div>
@@ -109,6 +109,7 @@ export default {
     name: 'Home',
     data() {
         return {
+            active: false,
             item: [
                 {
                     img: require('../assets/images/MarketMaking.svg'),
@@ -137,7 +138,7 @@ export default {
 
     },
     mounted() {
-
+        window.addEventListener('scroll', this.windowScroll);
     },
     methods: {
         link(id) {
@@ -146,7 +147,14 @@ export default {
                 return;
             }
             document.querySelector(id).scrollIntoView(true);
+        },
+        windowScroll() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+            this.active = scrollTop > 350;
         }
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.windowScroll);
     }
 
 };
@@ -169,9 +177,11 @@ export default {
             display: flex;
             align-items: center;
             justify-content: space-between;
-
-            box-shadow: 0 0 7px rgba(0, 0, 0, .1);
             height: 115PX;
+
+            &.active {
+                box-shadow: 0 0 7px rgba(0, 0, 0, .1);
+            }
         }
 
         .Left {
@@ -190,7 +200,8 @@ export default {
                 a {
                     color: #ffffff;
                     cursor: pointer;
-                    &:hover{
+
+                    &:hover {
                         color: rgba(#ffffff, .7);
                     }
                 }
@@ -256,7 +267,8 @@ export default {
                         font-weight: 400;
                         text-transform: none;
                     }
-                    .el-icon-right{
+
+                    .el-icon-right {
                         font-size: 22PX;
                         z-index: 100;
                         position: absolute;
@@ -264,8 +276,9 @@ export default {
                         font-weight: bold;
                         transform: translateY(50%);
                     }
-                    &:hover{
-                        .el-icon-right{
+
+                    &:hover {
+                        .el-icon-right {
                             color: #ffffff;
                         }
                     }
