@@ -46,8 +46,9 @@ export default {
 
     .ltd {
         color: #2334D8;
-        font-size: 22PX;
+        font-size: 16PX;
         margin-left: 40PX;
+        font-weight: bold;
     }
 
     .home {
