@@ -20,15 +20,17 @@
                         for Digital Assets
                     </H1>
                     <div class="Moer">
-                        <a href="#service">Discover More</a>
+                        <a @click="link('#service')">
+                            Discover More
+                            <i class="el-icon-right"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="Banner-Right">
-                    <!--                                                        <iframe src="https://acherontrading.com/animation.html"-->
-                    <!--                                                                style="border:0px #ffffff none;" name="myiFrame"-->
-                    <!--                                                                scrolling="no" frameborder="1" marginheight="0px"-->
-                    <!--                                                                marginwidth="0px" height="300px" width="100%px"-->
-                    <!--                                                                allowfullscreen></iframe>-->
+                    <iframe src="https://acherontrading.com/animation.html"
+                            style="border:0px #ffffff none;" name="myiFrame"
+                            scrolling="no" frameborder="1" marginheight="0px"
+                            marginwidth="0px" height="300px" width="100%px" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -175,6 +177,7 @@ export default {
         .Left {
             color: #ffffff;
             font-size: 30PX;
+            cursor: pointer;
         }
 
         .Right {
@@ -187,6 +190,9 @@ export default {
                 a {
                     color: #ffffff;
                     cursor: pointer;
+                    &:hover{
+                        color: rgba(#ffffff, .7);
+                    }
                 }
             }
         }
@@ -224,6 +230,7 @@ export default {
                     border-radius: 100PX;
                     padding-left: 20PX;
                     color: #2334D8;
+                    cursor: pointer;
 
                     &:after {
                         font-size: inherit !important;
@@ -248,6 +255,19 @@ export default {
                         text-shadow: none;
                         font-weight: 400;
                         text-transform: none;
+                    }
+                    .el-icon-right{
+                        font-size: 22PX;
+                        z-index: 100;
+                        position: absolute;
+                        right: 12PX;
+                        font-weight: bold;
+                        transform: translateY(50%);
+                    }
+                    &:hover{
+                        .el-icon-right{
+                            color: #ffffff;
+                        }
                     }
                 }
             }

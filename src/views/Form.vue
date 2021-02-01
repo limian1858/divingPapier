@@ -19,7 +19,9 @@
         </el-form-item>
 
         <el-form-item>
-            <el-button :loading="loading" class="submitForm" type="" @click="submitForm('ruleForm')">Send Message
+            <el-button :loading="loading" class="submitForm" type="" @click="submitForm('ruleForm')">
+                Send Message
+                <i class="el-icon-right"></i>
             </el-button>
         </el-form-item>
     </el-form>
