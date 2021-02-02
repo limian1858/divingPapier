@@ -43,7 +43,7 @@
             </div>
             <div class="Serve-Right">
                 <div class="Title">
-                    AcheronTrading is a designated market maker which provides liquidity and advisory services to
+                    Divine Rapier is a designated market maker which provides liquidity and advisory services to
                     digital asset issuers on exchanges
                 </div>
                 <div class="List">
